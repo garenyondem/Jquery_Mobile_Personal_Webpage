@@ -1,7 +1,7 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Garen YÃ¶ndem Blog</title>
+    <title>Garen Yöndem Blog</title>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9" />
     <link href="libraries/jquery_mobile_css_min_1.4.2.css" rel="stylesheet" />
     <script src="libraries/jquery_min_2.1.0.js"></script>
@@ -9,25 +9,45 @@
 </head>
 <body>
 
-    <div data-role="page">
+    <div data-role="page" id="anasayfa">
         <div data-role="header">
             <h1>garen.yondem</h1>
         </div>
             <div data-role="navbar">
                 <ul>
                     <li><a data-icon="home">Anasayfa</a></li>
-                    <!-- ui-state-persist konmazsa geridÃ¶nÃ¼ldÃ¼ÄŸÃ¼nde aktif konumunu korumuyor-->
-                    <li><a data-icon="info">HakkÄ±mda</a></li>
-                    <li><a data-icon="mail">Ä°letiÅŸim</a></li>
+                    <!-- ui-state-persist konmazsa geridönüldüğünde aktif konumunu korumuyor-->
+                    <li><a href="#hakkimda" data-icon="info">Hakkımda</a></li>
+                    <li><a href="#iletisim" data-icon="mail">İletişim</a></li>
                 </ul>
             </div>
-        
     </div>
 
+        <div data-role="page" id="hakkimda">
+        <div data-role="header">
+            <h1>garen.yondem</h1>
+        </div>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#anasayfa" data-icon="home">Anasayfa</a></li>
+                    <li><a class="ui-btn-active ui-state-persist" data-icon="info">Hakkımda</a></li>
+                    <li><a href="#iletisim" data-icon="mail">İletişim</a></li>
+                </ul>
+            </div>
+    </div>
 
-
-
-
+        <div data-role="page" id="iletisim">
+        <div data-role="header">
+            <h1>garen.yondem</h1>
+        </div>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#anasayfa" data-icon="home">Anasayfa</a></li>
+                    <li><a href="#hakkimda" data-icon="info">Hakkımda</a></li>
+                    <li><a class="ui-btn-active ui-state-persist" data-icon="mail">İletişim</a></li>
+                </ul>
+            </div>
+    </div>
 
 
 </body>
