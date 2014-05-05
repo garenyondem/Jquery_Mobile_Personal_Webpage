@@ -20,6 +20,8 @@
     <div data-role="page" id="anasayfa">
         <div data-role="header">
             <h1>garen.yondem</h1>
+            <a href="#" style="visibility:collapse;" class=""></a>
+            <a href="pages/search.html" data-rel="dialog" data-transition="slidedown" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-right ui-btn-icon-notext"></a>
         </div>
         <div data-role="navbar">
             <ul>
@@ -42,6 +44,8 @@
     <div data-role="page" id="hakkimda">
         <div data-role="header">
             <h1>garen.yondem</h1>
+            <a href="#" style="visibility:collapse;" class=""></a>
+            <a href="pages/search.html" data-rel="dialog" data-transition="slidedown" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-right ui-btn-icon-notext"></a>
         </div>
         <div data-role="navbar">
             <ul>
@@ -73,6 +77,8 @@
     <div data-role="page" id="iletisim">
         <div data-role="header">
             <h1>garen.yondem</h1>
+            <a href="#" style="visibility:collapse;" class=""></a>
+            <a href="pages/search.html" data-rel="dialog" data-transition="slidedown" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-right ui-btn-icon-notext"></a>
         </div>
         <div data-role="navbar">
             <ul>
@@ -82,7 +88,31 @@
             </ul>
         </div>
         <div role="main" class="ui-content">
-            <p>Bu sayfa iletiþim satfasý</p>
+
+
+            <form action="#" method="get">
+                <div data-role="fieldcontain">
+                    <label for="name">Ad:</label>
+                    <input type="text" name="name" id="name" value="" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="name">Soyad:</label>
+                    <input type="text" name="name" id="name" value="" />
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="textarea">Mesaj:</label>
+                    <textarea cols="40" rows="15" name="textarea" id="textarea"></textarea>
+                </div>
+
+
+                <fieldset class="ui-grid-a">
+
+                    <div class="ui-block-a"><button type="reset" data-theme="d">Sil</button></div>
+                    <div class="ui-block-b"><button type="submit" data-theme="a">Gönder</button></div>
+                </fieldset>
+
+            </form>
+
         </div>
         <div data-role="footer" position="fixed">
             <center>
