@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9" />
 
-    <link href="libraries/themeroller_garen.min.css" rel="stylesheet" />
     <link href="libraries/jquery.mobile.icons.min.css" rel="stylesheet" />
     <link href="libraries/jquery_mobile_css_min_1.4.2.css" rel="stylesheet" />
 
@@ -15,14 +14,16 @@
 
 
 </head>
-<body>
+<body data-theme="a">
 
     <div data-role="page" id="anasayfa">
+
         <div data-role="header">
             <h1>garen.yondem</h1>
             <a href="#" style="visibility:collapse;" class=""></a>
             <a href="pages/search.html" data-rel="dialog" data-transition="slidedown" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-right ui-btn-icon-notext"></a>
         </div>
+
         <div data-role="navbar">
             <ul>
                 <li><a data-icon="home">Anasayfa</a></li>
@@ -30,11 +31,34 @@
                 <li><a href="#iletisim" data-icon="mail">İletişim</a></li>
             </ul>
         </div>
+
         <div role="main" class="ui-content">
-            <p>Bu sayfa anasayfa</p><br />
-            <p>Türkçe Karakter Testi [ĞÜİŞÖÇğüşçöı]</p>
+
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#post_1" data-transition="slide">Nokia Software Updater (NSU) ile Amber ve GDR2<span class="ui-li-count">3</span></a></li>
+                <li><a href="#post_2" data-transition="slide">"Akıllı" Saatler<span class="ui-li-count">0</span></a></li>
+                <li><a href="#post_3" data-transition="slide">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak<span class="ui-li-count">4</span></a></li>
+                <li><a href="#post_4" data-transition="slide">Top Task List Uygulaması Artık Türkçe<span class="ui-li-count">5</span></a></li>
+                <li><a href="#post_5" data-transition="slide">Office 2013'de Yazma Animasyonunu Kapatmak<span class="ui-li-count">10</span></a></li>
+
+                <li><a href="#post_1" data-transition="slide">Nokia Software Updater (NSU) ile Amber ve GDR2<span class="ui-li-count">6</span></a></li>
+                <li><a href="#post_2" data-transition="slide">"Akıllı" Saatler<span class="ui-li-count">1</span></a></li>
+                <li><a href="#post_3" data-transition="slide">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak<span class="ui-li-count">3</span></a></li>
+                <li><a href="#post_4" data-transition="slide">Top Task List Uygulaması Artık Türkçe<span class="ui-li-count">7</span></a></li>
+                <li><a href="#post_5" data-transition="slide">Office 2013'de Yazma Animasyonunu Kapatmak<span class="ui-li-count">4</span></a></li>
+            </ul>
+            <div data-role="navbar" style="float:right;">
+                <ul data-role="controlgroup" data-type="horizontal" class="localnav">
+                    <li><a href="" data-role="button" data-transition="fade" class="btn ui-btn-active">1</a></li>
+                    <li><a href="" data-role="button" data-transition="fade">2</a></li>
+                    <li><a href="" data-role="button" data-transition="fade">3</a></li>
+                    <li><a href="" data-role="button" data-transition="fade">4</a></li>
+                </ul>
+            </div>
+            <p><h6>Karakter Testi [ĞÜİŞÖÇğüşçöı]</h6></p>
         </div>
-        <div data-role="footer" position="fixed">
+
+        <div data-role="footer">
             <center>
                 <p><small>2014 © Garen Yöndem</small></p>
             </center>
@@ -50,7 +74,7 @@
         <div data-role="navbar">
             <ul>
                 <li><a href="#anasayfa" data-icon="home">Anasayfa</a></li>
-                <li><a class="ui-btn-active ui-state-persist" data-icon="info">Hakkımda</a></li>
+                <li><a class="btn ui-btn-active ui-state-persist" data-icon="info">Hakkımda</a></li>
                 <li><a href="#iletisim" data-icon="mail">İletişim</a></li>
             </ul>
         </div>
@@ -67,7 +91,7 @@
             </p>
 
         </div>
-        <div data-role="footer" position="fixed">
+        <div data-role="footer">
             <center>
                 <p><small>2014 © Garen Yöndem</small></p>
             </center>
@@ -84,11 +108,10 @@
             <ul>
                 <li><a href="#anasayfa" data-icon="home">Anasayfa</a></li>
                 <li><a href="#hakkimda" data-icon="info">Hakkımda</a></li>
-                <li><a class="ui-btn-active ui-state-persist" data-icon="mail">İletişim</a></li>
+                <li><a class="btn ui-btn-active ui-state-persist" data-icon="mail">İletişim</a></li>
             </ul>
         </div>
         <div role="main" class="ui-content">
-
 
             <form action="#" method="get">
                 <div data-role="fieldcontain">
@@ -104,17 +127,13 @@
                     <textarea cols="40" rows="15" name="textarea" id="textarea"></textarea>
                 </div>
 
-
                 <fieldset class="ui-grid-a">
-
                     <div class="ui-block-a"><button type="reset" data-theme="d">Sil</button></div>
                     <div class="ui-block-b"><button type="submit" data-theme="a">Gönder</button></div>
                 </fieldset>
-
             </form>
-
         </div>
-        <div data-role="footer" position="fixed">
+        <div data-role="footer">
             <center>
                 <p><small>2014 © Garen Yöndem</small></p>
             </center>
@@ -122,5 +141,222 @@
     </div>
 
 
+    <div data-role="page" id="post_1">
+
+        <div data-role="header">
+            <h1>garen.yondem</h1>
+            <a href="#nav-panel" data-icon="bars" class="ui-btn ui-corner-all ui-shadow ui-icon-bullets ui-btn-icon-left ui-btn-icon-notext"></a>
+            <a href="pages/search.html" data-rel="dialog" data-transition="slidedown" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-right ui-btn-icon-notext"></a>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#anasayfa" data-icon="home">Anasayfa</a></li>
+                <li><a href="#hakkimda" data-icon="info">Hakkımda</a></li>
+                <li><a href="#iletisim" data-icon="mail">İletişim</a></li>
+            </ul>
+        </div>
+        <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+            <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+                <li data-icon="delete"><a href="#" data-rel="close">Menüyü kapat</a></li>
+                <li><a href="#post_1">Nokia Software Updater (NSU) ile Amber ve GDR2</a></li>
+                <li><a href="#post_2">"Akıllı" Saatler</a></li>
+                <li><a href="#post_3">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak</a></li>
+                <li><a href="#post_4">Top Task List Uygulaması Artık Türkçe</a></li>
+                <li><a href="#post_5">Office 2013'de Yazma Animasyonunu Kapatmak</a></li>
+                <li><a href="#post_1">Nokia Software Updater (NSU) ile Amber ve GDR2</a></li>
+                <li><a href="#post_2">"Akıllı" Saatler</a></li>
+                <li><a href="#post_3">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak</a></li>
+                <li><a href="#post_4">Top Task List Uygulaması Artık Türkçe</a></li>
+                <li><a href="#post_5">Office 2013'de Yazma Animasyonunu Kapatmak</a></li>
+            </ul>
+        </div>
+
+        <div role="main" class="ui-content">
+
+
+            <a data-role="button" data-icon="back" data-rel="back">Geri</a>
+        </div>
+
+        <div data-role="footer">
+            <center>
+                <p><small>2014 © Garen Yöndem</small></p>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="post_2">
+
+        <div data-role="header">
+            <h1>garen.yondem</h1>
+            <a href="#nav-panel" data-icon="bars" class="ui-btn ui-corner-all ui-shadow ui-icon-bullets ui-btn-icon-left ui-btn-icon-notext"></a>
+            <a href="pages/search.html" data-rel="dialog" data-transition="slidedown" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-right ui-btn-icon-notext"></a>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#anasayfa" data-icon="home">Anasayfa</a></li>
+                <li><a href="#hakkimda" data-icon="info">Hakkımda</a></li>
+                <li><a href="#iletisim" data-icon="mail">İletişim</a></li>
+            </ul>
+        </div>
+        <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+            <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+                <li data-icon="delete"><a href="#" data-rel="close">Menüyü kapat</a></li>
+                <li><a href="#post_1">Nokia Software Updater (NSU) ile Amber ve GDR2</a></li>
+                <li><a href="#post_2">"Akıllı" Saatler</a></li>
+                <li><a href="#post_3">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak</a></li>
+                <li><a href="#post_4">Top Task List Uygulaması Artık Türkçe</a></li>
+                <li><a href="#post_5">Office 2013'de Yazma Animasyonunu Kapatmak</a></li>
+                <li><a href="#post_1">Nokia Software Updater (NSU) ile Amber ve GDR2</a></li>
+                <li><a href="#post_2">"Akıllı" Saatler</a></li>
+                <li><a href="#post_3">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak</a></li>
+                <li><a href="#post_4">Top Task List Uygulaması Artık Türkçe</a></li>
+                <li><a href="#post_5">Office 2013'de Yazma Animasyonunu Kapatmak</a></li>
+            </ul>
+        </div>
+
+        <div role="main" class="ui-content">
+            <a data-rel="back">don don</a>
+
+
+        </div>
+
+        <div data-role="footer">
+            <center>
+                <p><small>2014 © Garen Yöndem</small></p>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="post_3">
+
+        <div data-role="header">
+            <h1>garen.yondem</h1>
+            <a href="#nav-panel" data-icon="bars" class="ui-btn ui-corner-all ui-shadow ui-icon-bullets ui-btn-icon-left ui-btn-icon-notext"></a>
+            <a href="pages/search.html" data-rel="dialog" data-transition="slidedown" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-right ui-btn-icon-notext"></a>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#anasayfa" data-icon="home">Anasayfa</a></li>
+                <li><a href="#hakkimda" data-icon="info">Hakkımda</a></li>
+                <li><a href="#iletisim" data-icon="mail">İletişim</a></li>
+            </ul>
+        </div>
+        <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+            <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+                <li data-icon="delete"><a href="#" data-rel="close">Menüyü kapat</a></li>
+                <li><a href="#post_1">Nokia Software Updater (NSU) ile Amber ve GDR2</a></li>
+                <li><a href="#post_2">"Akıllı" Saatler</a></li>
+                <li><a href="#post_3">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak</a></li>
+                <li><a href="#post_4">Top Task List Uygulaması Artık Türkçe</a></li>
+                <li><a href="#post_5">Office 2013'de Yazma Animasyonunu Kapatmak</a></li>
+                <li><a href="#post_1">Nokia Software Updater (NSU) ile Amber ve GDR2</a></li>
+                <li><a href="#post_2">"Akıllı" Saatler</a></li>
+                <li><a href="#post_3">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak</a></li>
+                <li><a href="#post_4">Top Task List Uygulaması Artık Türkçe</a></li>
+                <li><a href="#post_5">Office 2013'de Yazma Animasyonunu Kapatmak</a></li>
+            </ul>
+        </div>
+
+        <div role="main" class="ui-content">
+            <a data-rel="back">don don</a>
+
+
+        </div>
+
+        <div data-role="footer">
+            <center>
+                <p><small>2014 © Garen Yöndem</small></p>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="post_4">
+
+        <div data-role="header">
+            <h1>garen.yondem</h1>
+            <a href="#nav-panel" data-icon="bars" class="ui-btn ui-corner-all ui-shadow ui-icon-bullets ui-btn-icon-left ui-btn-icon-notext"></a>
+            <a href="pages/search.html" data-rel="dialog" data-transition="slidedown" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-right ui-btn-icon-notext"></a>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#anasayfa" data-icon="home">Anasayfa</a></li>
+                <li><a href="#hakkimda" data-icon="info">Hakkımda</a></li>
+                <li><a href="#iletisim" data-icon="mail">İletişim</a></li>
+            </ul>
+        </div>
+        <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+            <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+                <li data-icon="delete"><a href="#" data-rel="close">Menüyü kapat</a></li>
+                <li><a href="#post_1">Nokia Software Updater (NSU) ile Amber ve GDR2</a></li>
+                <li><a href="#post_2">"Akıllı" Saatler</a></li>
+                <li><a href="#post_3">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak</a></li>
+                <li><a href="#post_4">Top Task List Uygulaması Artık Türkçe</a></li>
+                <li><a href="#post_5">Office 2013'de Yazma Animasyonunu Kapatmak</a></li>
+                <li><a href="#post_1">Nokia Software Updater (NSU) ile Amber ve GDR2</a></li>
+                <li><a href="#post_2">"Akıllı" Saatler</a></li>
+                <li><a href="#post_3">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak</a></li>
+                <li><a href="#post_4">Top Task List Uygulaması Artık Türkçe</a></li>
+                <li><a href="#post_5">Office 2013'de Yazma Animasyonunu Kapatmak</a></li>
+            </ul>
+        </div>
+
+        <div role="main" class="ui-content">
+            <a data-rel="back">don don</a>
+
+
+        </div>
+
+        <div data-role="footer">
+            <center>
+                <p><small>2014 © Garen Yöndem</small></p>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="post_5">
+
+        <div data-role="header">
+            <h1>garen.yondem</h1>
+            <a href="#nav-panel" data-icon="bars" class="ui-btn ui-corner-all ui-shadow ui-icon-bullets ui-btn-icon-left ui-btn-icon-notext"></a>
+            <a href="pages/search.html" data-rel="dialog" data-transition="slidedown" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-right ui-btn-icon-notext"></a>
+        </div>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#anasayfa" data-icon="home">Anasayfa</a></li>
+                <li><a href="#hakkimda" data-icon="info">Hakkımda</a></li>
+                <li><a href="#iletisim" data-icon="mail">İletişim</a></li>
+            </ul>
+        </div>
+        <div data-role="panel" data-position="left" data-position-fixed="false" data-display="overlay" id="nav-panel" data-theme="a">
+            <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+                <li data-icon="delete"><a href="#" data-rel="close">Menüyü kapat</a></li>
+                <li><a href="#post_1">Nokia Software Updater (NSU) ile Amber ve GDR2</a></li>
+                <li><a href="#post_2">"Akıllı" Saatler</a></li>
+                <li><a href="#post_3">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak</a></li>
+                <li><a href="#post_4">Top Task List Uygulaması Artık Türkçe</a></li>
+                <li><a href="#post_5">Office 2013'de Yazma Animasyonunu Kapatmak</a></li>
+                <li><a href="#post_1">Nokia Software Updater (NSU) ile Amber ve GDR2</a></li>
+                <li><a href="#post_2">"Akıllı" Saatler</a></li>
+                <li><a href="#post_3">Pivot ve Panorama Kontrollerinde Seçilen Item'ı Yakalamak</a></li>
+                <li><a href="#post_4">Top Task List Uygulaması Artık Türkçe</a></li>
+                <li><a href="#post_5">Office 2013'de Yazma Animasyonunu Kapatmak</a></li>
+            </ul>
+        </div>
+
+        <div role="main" class="ui-content">
+            <a data-rel="back">don don</a>
+
+
+        </div>
+
+        <div data-role="footer">
+            <center>
+                <p><small>2014 © Garen Yöndem</small></p>
+            </center>
+        </div>
+    </div>
+
+
+    <link href="libraries/themeroller_garen.min.css" rel="stylesheet" />
 </body>
 </html>
