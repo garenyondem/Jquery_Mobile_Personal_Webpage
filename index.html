@@ -12,6 +12,28 @@
     <script src="libraries/jquery_min_2.1.0.js"></script>
     <script src="libraries/jquery_mobile_min_1.4.2.js"></script>
 
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyALL_tyxlFZzsaywTTFhAelmWNEoSgU-yI&sensor=false"></script>
+
+    <script>
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (pos) {
+
+                // navigator.geolocation.watchPosition HTML5 JavaScript API ile konum bilgileri elde ediliyor
+                //Google maps API sine pos parametresi olarak gönderiliyor
+                var coords = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
+                opts = {
+                    zoom: 15,
+                    center: coords,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                },
+                map = new google.maps.Map(document.querySelector('#map'), opts),
+                marker = new google.maps.Marker({
+                    position: coords,
+                    map: map
+                });
+            });
+        }
+    </script>
 
 </head>
 <body data-theme="a">
@@ -99,6 +121,7 @@
     </div>
 
     <div data-role="page" id="iletisim">
+
         <div data-role="header">
             <h1>garen.yondem</h1>
             <a href="#" style="visibility:collapse;" class=""></a>
@@ -112,6 +135,11 @@
             </ul>
         </div>
         <div role="main" class="ui-content">
+            <center>
+                <div id="map" style="height:275px; width:475px;"></div>
+            </center>
+
+
 
             <form action="#" method="get">
                 <div data-role="fieldcontain">
