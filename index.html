@@ -17,9 +17,6 @@
     <script>
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (pos) {
-
-                // navigator.geolocation.watchPosition HTML5 JavaScript API ile konum bilgileri elde ediliyor
-                //Google maps API sine pos parametresi olarak gönderiliyor
                 var coords = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
                 opts = {
                     zoom: 15,
@@ -33,6 +30,34 @@
                 });
             });
         }
+
+        function formu_kaydet() {
+            localStorage.setItem('Ad', $('.ad').val());
+            localStorage.setItem('Soyad', $('.soyad').val());
+            localStorage.setItem('Mesaj', $('.mesaj').val());
+        }
+
+        function formu_geri_yukle() {
+            this.document.getElementById("name").innerHTML = localStorage.getItem('Ad');
+            this.document.getElementById("surename").innerHTML = localStorage.getItem('Soyad');
+            this.document.getElementById("textarea").innerHTML = localStorage.getItem('Mesaj');
+        }
+
+
+        function temizle() {
+            this.document.getElementById("name").innerHTML = null;
+            this.document.getElementById("surename").innerHTML = null;
+            this.document.getElementById("textarea").innerHTML = null;
+        }
+
+        function kalici_temizle() {
+            localStorage.clear();
+            this.document.getElementById("name").innerHTML = null;
+            this.document.getElementById("surename").innerHTML = null;
+            this.document.getElementById("textarea").innerHTML = null;
+        }
+
+
     </script>
 
 </head>
@@ -144,20 +169,22 @@
             <form action="#" method="get">
                 <div data-role="fieldcontain">
                     <label for="name">Ad:</label>
-                    <input type="text" name="name" id="name" value="" />
+                    <textarea rows="1" name="name" id="name" class="ad"></textarea>
                 </div>
                 <div data-role="fieldcontain">
                     <label for="name">Soyad:</label>
-                    <input type="text" name="name" id="name" value="" />
+                    <textarea rows="1" name="name" id="surename" class="soyad"></textarea>
                 </div>
                 <div data-role="fieldcontain">
                     <label for="textarea">Mesaj:</label>
-                    <textarea cols="40" rows="15" name="textarea" id="textarea"></textarea>
+                    <textarea cols="40" rows="15" name="textarea" id="textarea" class="mesaj"></textarea>
                 </div>
 
-                <fieldset class="ui-grid-a">
-                    <div class="ui-block-a"><button type="reset" data-theme="d">Sil</button></div>
-                    <div class="ui-block-b"><button type="submit" data-theme="a">Gönder</button></div>
+                <fieldset class="ui-grid-a" style="float:right">
+                    <div class="btn ui-btn-inline"><button type="reset" data-theme="a" onclick="kalici_temizle()">Kalıcı Sil</button></div>
+                    <div class="btn ui-btn-inline"><button type="reset" data-theme="a" onclick="temizle()">Sil</button></div>
+                    <div class="btn ui-btn-inline"><button type="button" data-theme="a" onclick="formu_kaydet()">Gönder</button></div>
+                    <div class="btn ui-btn-inline"><button type="button" data-theme="a" onclick="formu_geri_yukle()">Getir</button></div>
                 </fieldset>
             </form>
         </div>
