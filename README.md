@@ -1,4 +1,4 @@
-Jquery_Mobile_Personal_Webpage
+Jquery Mobile Personal Webpage
 ==============================
 
 Static Jquery Mobile Blog with custom theme
